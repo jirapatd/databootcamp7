@@ -7,8 +7,8 @@ jjplay <- function() {
     user_select <- readline("Choose one: ")
     com_select <- sample(options,1)
     if (user_select == "exit") {
-      print(score)
-      print(total_play)
+      print(paste("Your Score :", score))
+      print(paste("You play :", total_play, "times"))
       print("Thank for playing")
       break
     } else if(user_select == com_select) {
