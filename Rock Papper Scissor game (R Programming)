@@ -1,14 +1,3 @@
-while (TRUE) {
-  text = readline("what's your name: ")
-  if (text == "exit") {
-    print("Thankk")
-    break
-  } else {
-    print(paste("Hi" , text))
-  }
-}
-
-
 jjplay <- function() {
   options <- c("hammer" , "scissor" , "paper")
   score <- 0
