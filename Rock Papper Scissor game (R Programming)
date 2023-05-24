@@ -1,0 +1,62 @@
+while (TRUE) {
+  text = readline("what's your name: ")
+  if (text == "exit") {
+    print("Thankk")
+    break
+  } else {
+    print(paste("Hi" , text))
+  }
+}
+
+
+jjplay <- function() {
+  options <- c("hammer" , "scissor" , "paper")
+  score <- 0
+  total_play <-0
+  
+  while (TRUE) {
+    user_select <- readline("Choose one: ")
+    com_select <- sample(options,1)
+    if (user_select == "exit") {
+      print(score)
+      print(total_play)
+      print("Thank for playing")
+      break
+    } else if(user_select == com_select) {
+      print("tie")
+      score <- score + 0
+      total_play <- total_play + 1
+      print(score)
+    } else if (user_select == "hammer" & com_select == "scissor") {
+      print("won")
+      score <- score + 1
+      total_play <- total_play + 1
+      print(score)
+    } else if (user_select == "hammer" & com_select == "paper") {
+      print("lose")
+      score <- score - 1
+      total_play <- total_play + 1
+      print(score)
+    } else if (user_select == "scissor" & com_select == "paper") {
+      print("won")
+      score <- score + 1
+      total_play <- total_play + 1
+      print(score)
+    } else if (user_select == "scissor" & com_select == "hammer") {
+      print("lose")
+      score <- score - 1
+      total_play <- total_play + 1
+      print(score)
+    } else if (user_select == "paper" & com_select == "hammer") {
+      print("won")
+      score <- score + 1
+      total_play <- total_play + 1
+      print(score)
+    } else if (user_select == "paper" & com_select == "scissor") {
+      print("lose")
+      score <- score - 1
+      total_play <- total_play + 1
+      print(score)
+    } else user_select <- readline("Choose one: ")
+  }
+}
