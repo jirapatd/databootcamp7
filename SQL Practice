@@ -40,6 +40,7 @@ An OCCUPATIONS table that contains the following records:
 ------------------------------------------------
 
 
+##Answer
 select Concat(Name,"(",LEFT(Occupation,1),")" ) AS Name
 from OCCUPATIONS
 UNION All
